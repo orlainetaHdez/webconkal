@@ -1,0 +1,99 @@
+
+.tab-container , .tab-container2 {
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.tabs , .tabs2{
+  text-align: center;
+/*  display: flex;
+  border-bottom: 1px solid #ccc;
+  background-color: #F2F2F2;
+  border-radius: 8px;*/
+}
+
+.tab-button ,  .tab-button2{
+  font-size: 18px;
+/*  border-radius: 8px;*/
+    background: transparent;
+  flex: 1;
+  padding: 6px;
+/*  background-color: #F2F2F2;*/
+  color:#426395;
+  border: none;
+  cursor: pointer;
+}
+
+.tab-button.active , .tab-button2.active {
+  /*background-color: #426395;*/
+  color:#2B2B2B;
+  border-bottom: 4px solid #C28D3E;
+}
+
+.tab-content , .tab-content2 {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.active , .tab-content2.active {
+  display: block;
+}
+
+
+#slick, #slick2 ,#slick3{
+display: block;
+}
+
+#slick.slick-initialized , #slick2.slick-initialized , #slick3.slick-initialized {
+display: block;
+}
+
+#slick .slick-list , #slick2 .slick-list , #slick3 .slick-list {
+/* margin-left: -15px;
+margin-right: -15px; */
+}
+
+#slick .slick-slide , #slick2 .slick-slide , #slick3 .slick-slide {
+padding-right: 15px;
+/*padding-left: 10px;*/ 
+}
+
+#slick .slick-slide:focus , #slick2 .slick-slide:focus , #slick3 .slick-slide:focus {
+outline: none;
+cursor: grab;
+}
+
+#slick .slick-arrow , #slick2 .slick-arrow , #slick3 .slick-arrow {
+position: absolute;
+width: 22.23px;
+height: 36px;
+top: 50%;
+background-color: transparent;
+border: none;
+-webkit-appearance: none;
+padding: 0;
+z-index: 100;
+transform: translateY(-50%);
+overflow: hidden;
+text-indent: 1000px;
+}
+
+#slick .slick-arrow:focus , #slick2 .slick-arrow:focus , #slick3 .slick-arrow:focus {
+outline: none;
+}
+
+#slick .slick-arrow:hover , #slick2 .slick-arrow:hover , #slick3 .slick-arrow:hover {
+cursor: pointer;
+}
+
+#slick .slick-prev ,  #slick2 .slick-prev , #slick3 .slick-prev {
+left: -50px;
+background-image: url('../images/concal/Vector.png');
+}
+
+#slick .slick-next , #slick2 .slick-next , #slick3 .slick-next {
+right: -50px;
+background-image: url('../images/concal/Vector2.png');
+}
