@@ -69,7 +69,7 @@ function getCurrentDate() {
 
 <template>
   <div>
-    <div style="min-height: 102.13px;background-color: #022452;overflow-x: hidden;">
+    <div style="min-height: 102.13px;background-color: #022452;overflow-x: hidden;display: grid">
             <div style="display: flex;align-items: center;justify-content: center;width: 100%;">
               <div class="row" style="width: 100%;max-width: 1155px;display: flex;justify-content: center;align-items: center;">
                 <div class="col-md-4" style="padding-right:0px; padding-left: 0px;">
@@ -82,10 +82,10 @@ function getCurrentDate() {
                                  <a href="#" class="btn btn-square btn-light rounded-circle mx-1"  target="_blank"  style="padding: 0;display: flex;align-items: center;justify-content: center;font-weight: normal;background-color: #CB2F80;"><i class="fab fa-youtube" style="color:#ffffff;width: 24px;"></i></a>
                                  <a href="#" class="btn btn-square btn-light rounded-circle mx-1"  target="_blank"  style="padding: 0;display: flex;align-items: center;justify-content: center;font-weight: normal;background-color: #CB2F80;"><i class="fab fa-tiktok" style="color:#ffffff;width: 24px;"></i></a>
                         </div>
-                        <div class="busqueda-container" style="background-color: white;width: 177px; border-radius: 48px;height: 32px;margin-top: 10px;">
+                        <!-- <div class="busqueda-container" style="background-color: white;width: 177px; border-radius: 48px;height: 32px;margin-top: 10px;">
                           <i class="fas fa-search icono-lupa" onclick="buscarTexto()"></i>
                             <input type="text" id="busqueda" placeholder="Buscar..." style="width: 140px; border-radius: 48px;height: 32px;font-size: 12px; background-color: transparent;border-color: transparent;color: black;outline: none;">
-                        </div>
+                        </div> -->
                       </div>
                   </div>
                 </div>

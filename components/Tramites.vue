@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="row" style="--bs-gutter-x: 0;padding-top: 10px;">
                                   <div class="col-4 serviciosMunicipales" style="display: flex;justify-content: center;align-items: center;">
-                                    <a href="reportes"><div class="servicios" style="cursor: pointer;width: 88px; height: 88px; border-radius: 12px;background-color: #065284;display: flex;justify-content: center;align-items: center;">
+                                    <a href="reporte"><div class="servicios" style="cursor: pointer;width: 88px; height: 88px; border-radius: 12px;background-color: #065284;display: flex;justify-content: center;align-items: center;">
                                       <div  class="contIcon">
                                         <svg class="icono" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"  style="width:36px;height:36px;">
                                             <path d="M21.255 7.5L28.5 14.745V28.5H7.5V7.5H21.255ZM21.255 4.5H7.5C5.85 4.5 4.5 5.85 4.5 7.5V28.5C4.5 30.15 5.85 31.5 7.5 31.5H28.5C30.15 31.5 31.5 30.15 31.5 28.5V14.745C31.5 13.95 31.185 13.185 30.615 12.63L23.37 5.385C22.815 4.815 22.05 4.5 21.255 4.5ZM10.5 22.5H25.5V25.5H10.5V22.5ZM10.5 16.5H25.5V19.5H10.5V16.5ZM10.5 10.5H21V13.5H10.5V10.5Z" fill="white"/>
@@ -48,12 +48,12 @@
                                     </div></a>
                                   </div>
                                   <div class="col-4 serviciosMunicipales" style="display: flex;justify-content: center;align-items: center;">
-                                    <a href="tramites"><div class="servicios" style="cursor: pointer;width: 88px; height: 88px; border-radius: 12px;background-color: #065284;display: flex;justify-content: center;align-items: center;">
+                                    <a href="martes_ciudadano"><div class="servicios" style="cursor: pointer;width: 88px; height: 88px; border-radius: 12px;background-color: #065284;display: flex;justify-content: center;align-items: center;">
                                       <div  class="contIcon">
                                         <svg class="icono" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"  style="width:36px;height:36px;">
                                             <path d="M25.5 30.585C25.065 30.585 24.66 30.495 24.36 30.36C23.295 29.805 22.545 29.04 21.795 26.79C21.03 24.45 19.59 23.355 18.21 22.29C17.025 21.375 15.795 20.43 14.73 18.495C13.935 17.055 13.5 15.48 13.5 14.085C13.5 9.88504 16.8 6.58504 21 6.58504C25.2 6.58504 28.5 9.88504 28.5 14.085H31.5C31.5 8.19004 26.895 3.58504 21 3.58504C15.105 3.58504 10.5 8.19004 10.5 14.085C10.5 15.975 11.07 18.06 12.105 19.935C13.47 22.41 15.075 23.655 16.38 24.66C17.595 25.59 18.465 26.265 18.945 27.735C19.845 30.465 21 31.995 23.04 33.06C23.805 33.405 24.645 33.585 25.5 33.585C28.815 33.585 31.5 30.9 31.5 27.585H28.5C28.5 29.235 27.15 30.585 25.5 30.585ZM11.46 4.54504L9.33 2.41504C6.345 5.40004 4.5 9.52504 4.5 14.085C4.5 18.645 6.345 22.77 9.33 25.755L11.445 23.64C9.015 21.195 7.5 17.82 7.5 14.085C7.5 10.35 9.015 6.97504 11.46 4.54504ZM17.25 14.085C17.25 16.155 18.93 17.835 21 17.835C23.07 17.835 24.75 16.155 24.75 14.085C24.75 12.015 23.07 10.335 21 10.335C18.93 10.335 17.25 12.015 17.25 14.085Z" fill="white"/>
                                         </svg>
-                                        <p style="color: white;font-size: 12px;margin-bottom: 0px;margin-top: 2px;">ATENCIÓN</p>
+                                        <p style="color: white;font-size: 12px;margin-bottom: 0px;margin-top: 2px;">MARTES</p>
                                       </div>
                                     </div></a>
                                   </div>
