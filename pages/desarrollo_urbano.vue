@@ -16,7 +16,7 @@
             <div class="container" style="max-width: 1119px;z-index:2;position:relative;--bs-gutter-x: 5px;" >
                 <div class="row">
                     <div class=" col-lg-9" style="padding-bottom: 30px;text-align: left;padding-right: 30px !important;">
-                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;">Desarrollo urbano</p>
+                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">Desarrollo urbano</p>
                            <!-- <form action="/enviar-reporte" method="POST" @submit.prevent="submitForm"> -->
                             <div class="accordion accordion-flush" id="accordionFlushExample">
                                   <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">

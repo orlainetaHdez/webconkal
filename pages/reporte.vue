@@ -64,7 +64,7 @@ const submitForm = async () => {
             <div class="container" style="max-width: 1119px;z-index:2;position:relative;--bs-gutter-x: 5px;" >
                 <div class="row">
                     <div class=" col-lg-9" style="padding-bottom: 30px;text-align: left;padding-right: 30px !important;">
-                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;">Reporte</p>
+                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">Reporte</p>
                            <!-- <form action="/enviar-reporte" method="POST" @submit.prevent="submitForm"> -->
                           <template>
                             <form @submit.prevent="submitForm">

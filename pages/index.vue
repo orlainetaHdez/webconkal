@@ -153,10 +153,10 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
                                           <img :src="post.files[0].url" class="img-fluid w-100 rounded-top" alt="Image">
                                       </a>
                                   </div>
-                                  <div class="text-start"  style="height: 202px;border-radius: 0 0 10px 10px;background: #ffffff;position: relative;z-index: 10;">
+                                  <div class="text-start"  style="height: 90px;border-radius: 0 0 10px 10px;background: #ffffff;position: relative;z-index: 10;">
                                       <p class="titulo1   display-4  mb-4 " style="padding-top: 16px;font-weight:700;text-align: left;color: #065284;font-size:16px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px !important;">{{ post.title }}</p>
                                       <p class="   display-4  mb-4" style="padding-top: 5px;font-weight:400;text-align: left;color: #595959;font-size:10px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px !important;">{{ post.subtitle }}</p>
-                                      <p style="line-height: 16.8px;font-weight: 300;text-align: left;font-size:14px !important;padding: 10px;color: #222222;padding-left: 10px;padding-right: 10px;">Nuestra #alcaldesa Linda Pérez Quijano, mediante un homenaje arrancó de manera formal el inicio de las labores del Ayuntamiento de #Conkal para la administración...</p>
+                                      <!-- <p style="line-height: 16.8px;font-weight: 300;text-align: left;font-size:14px !important;padding: 10px;color: #222222;padding-left: 10px;padding-right: 10px;font-family: LatoG;">Nuestra #alcaldesa Linda Pérez Quijano, mediante un homenaje arrancó de manera formal el inicio de las labores del Ayuntamiento de #Conkal para la administración...</p> -->
                                   </div>
                               </div></a>
                     </div>        
@@ -224,7 +224,7 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
     <div class="container-fluid" style="background: linear-gradient(rgba(29, 149, 186, 0.1), rgba(29, 149, 186, 0.1)) ,url(images/Framemaya.png);position: relative; z-index: 2; background-size: inherit; background-repeat: no-repeat; background-position: center; background-color: #1D95BA;text-align: center;min-height: 281px; display: flex;
     justify-content: center;align-items: center;">
         <div id="contenidonumber" style="max-width:1004px;width:100%;min-height: 165px;padding: 36px;border-radius: 16px;background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65));margin-top: 10px;margin-bottom: 10px;">
-            <p style="font-family: PenumbraSemibold; font-size: 20px; font-weight: 700; text-align: center; color: #022452;">
+            <p style=" font-size: 20px; font-weight: 700; text-align: center; color: #022452;font-family: JostBold; ">
                 NÚMEROS DE EMERGENCIA</p>
             <div class="row" style="display: flex;justify-content:center;">
                 <div class="col-md-4" style="height: 40px;border-radius: 8px;display: flex;overflow: hidden;width: max-content;margin: 10px;padding: 0px;">
@@ -232,9 +232,9 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
                         <img src="assets/images/concal/emergencia/crisis_alert.png" style="width: 24px;">
                     </div>
                     <div style="width: -webkit-fill-available;height: 40px; background-color: white;text-align: left;    padding-right: 10px;">
-                        <p style="margin-left: 10px;font-size: 16px;font-weight:700; color: #022452;padding-bottom: 0px;margin-bottom: 0px;">
+                        <p style="margin-left: 10px;font-size: 16px;font-weight:700; color: #022452;padding-bottom: 0px;margin-bottom: 0px;font-family: JostBold; ">
                             911</p>
-                        <p style="font-family: PenumbraSemibold;margin-left: 10px;font-size: 12px; color: #022452;padding-bottom: 0px;margin-bottom: 0px;">
+                        <p style="font-weight: 700;margin-left: 10px;font-size: 12px; color: #022452;padding-bottom: 0px;margin-bottom: 0px;font-family: LatoG; ">
                             EMERGENCIAS</p>
                     </div>
                 </div>
@@ -244,9 +244,9 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
                         <img src="assets/images/concal/emergencia/wifi_calling_3.png" style="width: 24px;">
                     </div>
                     <div style="width: -webkit-fill-available;height: 40px; background-color: white;text-align: left;    padding-right: 10px;">
-                        <p style="margin-left: 10px;font-size: 16px;font-weight:700; color: #022452;padding-bottom: 0px;margin-bottom: 0px;">
+                        <p style="margin-left: 10px;font-size: 16px;font-weight:700; color: #022452;padding-bottom: 0px;margin-bottom: 0px;font-family: JostBold; ">
                             089</p>
-                        <p style="font-family: PenumbraSemibold;margin-left: 10px;font-size: 12px; color: #022452;padding-bottom: 0px;margin-bottom: 0px;">
+                        <p style="font-weight: 700;margin-left: 10px;font-size: 12px; color: #022452;padding-bottom: 0px;margin-bottom: 0px;font-family: LatoG; ">
                             DENUNCIA</p>
                     </div>
                 </div>
@@ -256,9 +256,9 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
                         <img src="assets/images/concal/emergencia/local_police.png" style="width: 24px;">
                     </div>
                     <div style="width: -webkit-fill-available;height: 40px; background-color: white;text-align: left;    padding-right: 10px;">
-                        <p style="margin-left: 10px;font-size: 16px;font-weight:700; color: #022452;padding-bottom: 0px;margin-bottom: 0px;">
+                        <p style="margin-left: 10px;font-size: 16px;font-weight:700; color: #022452;padding-bottom: 0px;margin-bottom: 0px;font-family: JostBold; ">
                             999 930 3200</p>
-                        <p style="font-family: PenumbraSemibold;margin-left: 10px;font-size: 12px; color: #022452;padding-bottom: 0px;margin-bottom: 0px;">
+                        <p style="font-weight: 700;margin-left: 10px;font-size: 12px; color: #022452;padding-bottom: 0px;margin-bottom: 0px;font-family: LatoG; ">
                             SEG. PÚBLICA</p>
                     </div>
                 </div>
@@ -268,9 +268,9 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
                         <img src="assets/images/concal/emergencia/local_fire_department.png" style="width: 24px;">
                     </div>
                     <div style="width: -webkit-fill-available;height: 40px; background-color: white;text-align: left;    padding-right: 10px;">
-                        <p style="margin-left: 10px;font-size: 16px;font-weight:700; color: #022452;padding-bottom: 0px;margin-bottom: 0px;">
+                        <p style="margin-left: 10px;font-size: 16px;font-weight:700; color: #022452;padding-bottom: 0px;margin-bottom: 0px;font-family: JostBold; ">
                             999 930 3200</p>
-                        <p style="font-family: PenumbraSemibold;margin-left: 10px;font-size: 12px; color: #022452;padding-bottom: 0px;margin-bottom: 0px;">
+                        <p style="font-weight: 700;margin-left: 10px;font-size: 12px; color: #022452;padding-bottom: 0px;margin-bottom: 0px;font-family: LatoG; ">
                             BOMBEROS</p>
                     </div>
                 </div>
@@ -279,9 +279,9 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
                         <img src="assets/images/concal/emergencia/female.png" style="width: 24px;">
                     </div>
                     <div style="width: -webkit-fill-available;height: 40px; background-color: white;text-align: left;    padding-right: 10px;">
-                        <p style="margin-left: 10px;font-size: 16px;font-weight:700; color: #022452;padding-bottom: 0px;margin-bottom: 0px;">
+                        <p style="margin-left: 10px;font-size: 16px;font-weight:700; color: #022452;padding-bottom: 0px;margin-bottom: 0px;font-family: JostBold; ">
                             999 930 3200</p>
-                        <p style="font-family: PenumbraSemibold;margin-left: 10px;font-size: 12px;color: #022452;padding-bottom: 0px;margin-bottom: 0px;">
+                        <p style="margin-left: 10px;font-size: 12px;color: #022452;padding-bottom: 0px;margin-bottom: 0px;font-family: LatoG; font-weight: 700;;">
                             ATENCIÓN A LA MUJER</p>
                     </div>
                 </div>
@@ -292,4 +292,20 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+    
+@font-face{
+    font-family: "JostBold";
+    src: url(".assets/fonts/Jost/static/Jost-Bold.ttf") format("truetype");
+    /*src: url("./fonts/posterama/bf8e6666252f4d6e781c1afacd6fb995.eot?#iefix")format("embedded-opentype"),
+        url("./fonts/posterama/bf8e6666252f4d6e781c1afacd6fb995.woff")format("woff"),
+        url("./fonts/posterama/bf8e6666252f4d6e781c1afacd6fb995.woff2")format("woff2"),
+        url("./fonts/posterama/bf8e6666252f4d6e781c1afacd6fb995.ttf")format("truetype"),
+        url("./fonts/posterama/bf8e6666252f4d6e781c1afacd6fb995.svg#Posterama 1927")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;*/
+}
+
+  
+</style>

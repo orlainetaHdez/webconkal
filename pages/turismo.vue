@@ -47,7 +47,7 @@ const { data, error } = await useAsyncData(async () => {
                       </template> -->
                       <template>
                             <div v-if="data && !error">
-                              <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;">{{ data.title }}</p>
+                              <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">{{ data.title }}</p>
                               
                               <!-- Check if image exists -->
                               <img 
@@ -59,7 +59,7 @@ const { data, error } = await useAsyncData(async () => {
                               <p v-else class="no-image">No image available.</p> <!-- Fallback for no image -->
                               
                               <!-- Check if html_content exists and is not empty -->
-                              <p v-if="data.html_content" style="font-size: 16px;font-weight: 400;color: #000000;padding-top: 20px;" v-html="data.html_content"></p>
+                              <p v-if="data.html_content" style="font-size: 16px;font-weight: 400;color: #000000;padding-top: 20px;font-family: LatoG;" v-html="data.html_content"></p>
                               <p v-else class="no-content">No content available.</p> <!-- Fallback for no content -->
                             </div>
                           </template>

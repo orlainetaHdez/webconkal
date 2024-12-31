@@ -12,20 +12,20 @@
                         <div style="padding-left: 14px;">
                             <div class="contenido" style="display: flex;">
                                 <img src="assets/images/concal/PhoneCall.png" alt="Logo" width="16px;" height="16px;">
-                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;">999 912 4050</p>
+                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;font-family: LatoG; ">999 912 4050</p>
                             </div>
                         </div>
                         <div style="padding-left: 14px;">
                             <div class="contenido" style="display: flex;">
                                 <img src="assets/images/concal/clock.png" alt="Logo" width="16px;" height="16px;">
-                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;">Lun - Vie<br>9 AM - 5 PM
+                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;font-family: LatoG; ">Lun - Vie<br>9 AM - 5 PM
                                 </p>
                             </div>
                         </div>
                         <div style="padding-left: 14px;">
                             <div class="contenido" style="display: flex;">
                                 <img src="assets/images/concal/MapPinLine.png" alt="Logo" width="16px;" height="16px;">
-                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;">22 s/n, Centro,<br>.97000
+                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;font-family: LatoG; ">22 s/n, Centro,<br>.97000
                                     Conkal, Yuc.</p>
                             </div>
                         </div>
@@ -42,8 +42,8 @@
                                 <a href="#" class="btn btn-square btn-light rounded-circle mx-1"  target="_blank"  style="padding: 0;display: flex;align-items: center;justify-content: center;font-weight: normal;background-color: #CB2F80;"><i class="fab fa-youtube" style="color:#ffffff;width: 24px;"></i></a>
                                 <a href="#" class="btn btn-square btn-light rounded-circle mx-1"  target="_blank"  style="padding: 0;display: flex;align-items: center;justify-content: center;font-weight: normal;background-color: #CB2F80;"><i class="fab fa-tiktok" style="color:#ffffff;width: 24px;"></i></a>
                         </div>
-                        <p style="font-size: 12px;color: #D9D9D9;padding-top: 10px;">Política de Uso y Privacidad</p>
-                        <p style="font-size: 12px;color: #D9D9D9;">2024. H. Ayuntamiento de Conkal.<br>Todos los
+                        <p style="font-size: 12px;color: #D9D9D9;padding-top: 10px;font-family: LatoG; ">Política de Uso y Privacidad</p>
+                        <p style="font-size: 12px;color: #D9D9D9;font-family: LatoG; ">2024. H. Ayuntamiento de Conkal.<br>Todos los
                             derechos Reservados</p>
                     </div>
                 </div>

@@ -43,14 +43,14 @@ const { data, error } = await useAsyncData(async () => {
                     <div class=" col-lg-9" style="padding-bottom: 10px;text-align: left;">
                       
                         <div v-if="data && !error">
-                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;margin-bottom: 0px;">{{ data.title }}</p>
+                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;margin-bottom: 0px;font-family: JostBold;">{{ data.title }}</p>
                            <p style="font-size: 12px;font-weight: 700;color:#065284;text-align: left;">{{ data.published_date }}</p>
                            <img :src="data.files[0].url" class="d-block w-100" alt="..." style="width: 820px;">
                            <div style="width: 100%;">
-                             <p style="font-size: 12px;font-weight: 400;color: #595959;padding: 10px;background-color: #D9D9D9;">{{ data.subtitle }}</p>
+                             <p style="font-size: 12px;font-weight: 400;color: #595959;padding: 10px;background-color: #D9D9D9;font-family: LatoG;">{{ data.subtitle }}</p>
                            </div>
                           <template>
-                            <div :key="data.html_content" v-html="data.html_content" style="font-size: 16px;font-weight: 400;color: #000000;padding-top: 10px;"></div>
+                            <div :key="data.html_content" v-html="data.html_content" style="font-size: 16px;font-weight: 400;color: #000000;padding-top: 10px;font-family: LatoG;"></div>
                           </template>
                          </div>
                         

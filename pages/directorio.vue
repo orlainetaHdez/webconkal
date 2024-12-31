@@ -26,7 +26,7 @@ const response2 = directorioP.value.data.municipalDepartments
             <div class="container" style="max-width: 1119px;z-index:2;position:relative;--bs-gutter-x: 5px;" >
                 <div class="row">
                     <div class=" col-lg-9" style="padding-bottom: 10px;text-align: left;">
-                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;">Presidencia Municipal</p>
+                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">Presidencia Municipal</p>
                            <div class="row">
                             <template v-for="(post,index) in response.data">
                               <div v-if="index ===0"  class="col-12" > 

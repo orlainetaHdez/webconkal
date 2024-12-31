@@ -14,7 +14,7 @@
             <div class="container" style="max-width: 1119px;z-index:2;position:relative;--bs-gutter-x: 5px;" >
                 <div class="row">
                     <div class=" col-lg-9" style="padding-bottom: 10px;text-align: left;">
-                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;">Predial</p>
+                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">Predial</p>
                            <img src="assets/images/concal/imageAgua.png" class="d-block w-100" alt="..." style="padding-bottom: 30px;">
                            <h3>Requisitos de Pago de Predial</h3>
                            <ul>

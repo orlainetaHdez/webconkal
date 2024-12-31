@@ -16,7 +16,7 @@
             <div class="container" style="max-width: 1119px;z-index:2;position:relative;--bs-gutter-x: 5px;" >
                 <div class="row">
                     <div class=" col-lg-9" style="padding-bottom: 10px;text-align: left;padding-right: 30px !important;">
-                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;">Contacto</p>
+                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">Contacto</p>
                             <Map />      
                             <div class="row" style="padding-top:30px;">
                              <div class="col-md-6">

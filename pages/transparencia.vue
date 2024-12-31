@@ -206,7 +206,7 @@
                                 </div>
                     </div>
                     <div class=" col-lg-9" style="padding-left: 20px;padding-right: 20px;text-align: left;">
-                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;">Unidad de Transparencia Municipal</p>
+                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;font-family: JostBold;">Unidad de Transparencia Municipal</p>
                            <img src="assets/images/concal/transparencia.png" class="d-block w-100" alt="..." style="">
                            <div class="row" style="padding-top:30px;">
                              <div class="col-md-6">
