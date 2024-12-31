@@ -1,52 +1,25 @@
 <script setup lang="ts">
-   const { data:tipos }= await useAsyncData( () => $fetch('https://api.conkal.tobecorporativo.mx/api/v1/portal/reporte-ciudadano/tipos'), {
-       // lazy: true
-})
-console.log(tipos);
-const response = tipos.value.data.reportTypes
-
-console.log(response);
-import { reactive } from 'vue'
-
-const form = reactive({
-  report_type_id: '',
-  description: '',
-  citizen_name: '',
-  citizen_last_name: '',
-  phone: '',
-  email: ''
-})
-
-const submitForm = async () => {
-  console.log(form)
-  // Validación de campos
-  if (!form.description || !form.citizen_name || !form.phone || !form.email) {
-    alert('Por favor completa todos los campos requeridos.')
-    return
+     const { data, error } = await useAsyncData(async () => {
+  try {
+    // Realizando la solicitud GET con parámetros en la URL (query string)
+    const response = await $fetch('https://api.conkal.tobecorporativo.mx/api/v1/portal/pagina/listar', {
+      method: 'GET',
+      params: {
+        page_categories_group_name: 'Martes ciudadano', // Agregar parámetros aquí en lugar de body
+      },
+      headers: {
+      }
+    })
+   const response2 = response.data.pages.data
+    
+    console.log(response2)
+    return response2
+  } catch (err) {
+    // Manejo de errores
+    console.error('Error en el envío del reporte:', err)
+    throw new Error('Hubo un error al enviar el reporte.')
   }
-
-  const { data, error } = await useAsyncData('sendReport', async () => {
-    try {
-      const response = await $fetch('https://api.conkal.tobecorporativo.mx/api/v1/portal/reporte-ciudadano/crear', {
-        method: 'POST',
-        body: form,
-        // headers: {
-        //   'Content-Type': 'application/json',
-        // },
-      })
-      return response
-    } catch (err) {
-      console.error('Error en el envío del reporte:', err)
-      throw new Error('Hubo un error al enviar el reporte.')
-    }
-  })
-
-  if (error.value) {
-    alert(error.value.message)
-  } else {
-    alert('Reporte enviado con éxito')
-  }
-}
+})
 
 </script>
 
@@ -65,6 +38,28 @@ const submitForm = async () => {
                 <div class="row">
                     <div class=" col-lg-9" style="padding-bottom: 30px;text-align: left;padding-right: 30px !important;">
                            <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;">Martes ciudadano</p>
+
+                           <div class="row" style="padding-top:10px;">
+                              <template v-for="(post,index) in data">
+                                <div class="col-sm-12  col-md-4  " data-wow-delay="0.2s" style="cursor: pointer;padding-top: 16px;">
+                                  <a :href="'detalle_martes_ciudadano?id='+post.id">  <div class="blog-item" style="background-color: rgba(255, 255, 255, 0.5);border-radius: 8px;box-shadow: 0px 0px 20px 0px #00000059;">
+                                                  <div class="blog-img">
+                                                     
+                                                            <div style="height:22px;background-color:#1D95BA;position:absolute;z-index:1;border-radius: 10px 0 10px;display: flex;justify-content: center;align-items: center;">
+                                                                  <p style="color:white;padding:10px;font-size:12px;margin-bottom: 0px;">Noticias</p>
+                                                            </div>
+                                                          <img :src="post.files[0].url" class="img-fluid w-100 rounded-top" alt="Image">
+                                                     
+                                                  </div>
+                                                  <div class="text-start"  style="    height: 202px;border-radius: 0 0 10px 10px;background: #ffffff;position: relative;z-index: 10;">
+                                                      <p class="titulo1   display-4  mb-4 " style="padding-top: 16px;font-weight:700;text-align: left;color: #065284;font-size:16px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px !important;">{{ post.title }}</p>
+                                                      <p class="   display-4  mb-4" style="padding-top: 5px;font-weight:400;text-align: left;color: #595959;font-size:10px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px !important;">{{ post.subtitle }}</p>
+                                                      <p style="line-height: 16.8px;font-weight: 300;text-align: left;font-size:14px !important;padding: 10px;color: #222222;padding-left: 10px;padding-right: 10px;">Nuestra #alcaldesa Linda Pérez Quijano, mediante un homenaje arrancó de manera formal el inicio de las labores del Ayuntamiento de #Conkal para la administración...</p>
+                                                  </div>
+                                              </div></a> 
+                                    </div>        
+                                </template>
+                              </div>
                            <!-- <form action="/enviar-reporte" method="POST" @submit.prevent="submitForm"> -->
                           <!-- <template>
                             <form @submit.prevent="submitForm">

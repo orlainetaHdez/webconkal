@@ -30,7 +30,7 @@
                            </div>
                            <div class="row" style="padding-top:30px;">
                              <div class="col-md-6">
-                               <p style="font-size:16px; font-weight:600;color:#065284;margin-bottom:5px;">Correo electónico:</p>
+                               <p style="font-size:16px; font-weight:600;color:#065284;margin-bottom:5px;">Correo electrónico:</p>
                                <p style="font-size:16px; font-weight:400;color:#222222;">conkal@transparenciayucatan.org.mx</p>
                              </div>
                              <div class="col-md-6">

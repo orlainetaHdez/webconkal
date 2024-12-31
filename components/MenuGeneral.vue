@@ -30,7 +30,7 @@
                                     <a href="reporte" class="dropdown-item">Reporte</a>
                                     <a href="martes_ciudadano" class="dropdown-item">Martes ciudadano</a>
                                     <!-- <a href="reportes" class="dropdown-item">Reportes</a> -->
-                                    <a href="#" class="dropdown-item">Quejas y sugerencias</a>
+                                    <!-- <a href="#" class="dropdown-item">Quejas y sugerencias</a> -->
                                 </div>
                             </div>
                             <div class="nav-item dropdown">
