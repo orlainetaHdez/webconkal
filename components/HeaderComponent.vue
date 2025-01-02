@@ -91,11 +91,11 @@ function getCurrentDate() {
                 </div>
                  <div class="col-md-8" style="padding-right:0px; padding-left: 0px;">
                     <div class="row">
-                        <div class="col-md-5" style="padding-bottom: 10px;">
+                        <div class="col-md-5" style="padding-bottom: 10px;text-align: center;padding-top: 10px;">
                           <a href="/"><img src="assets/images/concal/Logotipo.png" alt="Logo" style="width: 100%;max-width: 239px;"> </a>
                         </div>
                         <div class="col-md-7">
-                          <div class="row" style="display: flex;justify-content: center;align-items: center;">
+                          <div class="row" style="display: flex;justify-content: center;align-items: center;padding-top: 10px;">
                              <div class="col-4" style="display: flex;justify-content: center;align-items: center;">
                                <div class="contenido">
                                  <div  style="display: flex;">

@@ -1,11 +1,26 @@
 <script setup lang="ts">
-   const { data:tipos }= await useAsyncData( () => $fetch('https://api.conkal.tobecorporativo.mx/api/v1/portal/reporte-ciudadano/tipos'), {
-       // lazy: true
-})
-console.log(tipos);
-const response = tipos.value.data.reportTypes
 
-console.log(response);
+const { data : reportes, error } = await useAsyncData(async () => {
+  try {
+    // Realizando la solicitud GET con parámetros en la URL (query string)
+    const response2 = await $fetch('https://administrador.yucatanconkal.gob.mx/api/v1/portal/reporte-ciudadano/tipos', {
+      method: 'GET',
+    
+    })
+
+const response = response2.data.reportTypes.data
+    
+    console.log(response)
+    return response
+  } catch (err) {
+    // Manejo de errores
+    console.error('Error en el envío del reporte:', err)
+    throw new Error('Hubo un error al enviar el reporte.')
+  }
+})
+
+
+
 import { reactive } from 'vue'
 
 const form = reactive({
@@ -72,7 +87,7 @@ const submitForm = async () => {
                              <div  class="col-12" style="margin-top:20px;">
                                <label for="frutas" style="width:100%;">Tipo:</label>
                                <select v-model="form.report_type_id" id="report_type_id" name="frutas" style="width:100%;height:40px;border:1px solid #D9D9D9;border-radius:10px;padding-left: 15px;margin-top: 5px;">
-                                <template v-for="(post,index) in response.data">
+                                <template v-for="(post,index) in reportes">
                                   <option :value="post.id" >{{ post.name }}</option>
                                 </template>         
                                </select>

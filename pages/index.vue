@@ -2,7 +2,7 @@
     const { data, error } = await useAsyncData(async () => {
   try {
     // Realizando la solicitud GET con parámetros en la URL (query string)
-    const response = await $fetch('https://api.conkal.tobecorporativo.mx/api/v1/portal/pagina/listar', {
+    const response = await $fetch('https://administrador.yucatanconkal.gob.mx/api/v1/portal/pagina/listar', {
       method: 'GET',
       params: {
         page_categories_name: 'noticias', // Agregar parámetros aquí en lugar de body
@@ -24,7 +24,7 @@
 const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
   try {
     // Realizando la solicitud GET con parámetros en la URL (query string)
-    const response3 = await $fetch('https://api.conkal.tobecorporativo.mx/api/v1/portal/pagina/listar', {
+    const response3 = await $fetch('https://administrador.yucatanconkal.gob.mx/api/v1/portal/pagina/listar', {
       method: 'GET',
       params: {
         page_categories_group_name: 'convocatorias', // Agregar parámetros aquí en lugar de body
