@@ -3,7 +3,7 @@
 const { data : directorio, error } = await useAsyncData(async () => {
   try {
     // Realizando la solicitud GET con parámetros en la URL (query string)
-    const response2 = await $fetch('https://administrador.yucatanconkal.gob.mx/api/v1/portal/directory/hierarchies', {
+    const response2 = await $fetch('https://api.yucatanconkal.gob.mx/api/v1/portal/directory/hierarchies', {
       method: 'GET',
       params: {
         municipal_department_id: 1, // Agregar parámetros aquí en lugar de body
@@ -27,7 +27,7 @@ const response = response2.data.municipalHierarchies.data
 const { data : directorioP, error:edirectorioP } = await useAsyncData(async () => {
   try {
     // Realizando la solicitud GET con parámetros en la URL (query string)
-    const response3 = await $fetch('https://administrador.yucatanconkal.gob.mx/api/v1/portal/directory/departments', {
+    const response3 = await $fetch('https://api.yucatanconkal.gob.mx/api/v1/portal/directory/departments', {
       method: 'GET',
       headers: {
       }
