@@ -11,7 +11,7 @@ const { data, error } = await useAsyncData(async () => {
       headers: {
       }
     })
-   const response2 = response.data.pages.data[0]
+   const response2 = response.data.pages.data
     
     console.log(response2)
     return response2
@@ -47,21 +47,21 @@ const { data, error } = await useAsyncData(async () => {
 
                   
 
-                            <template>
+                            <template v-for="(post,index) in data">
                             <div v-if="data && !error">
-                              <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">{{ data.title }}</p>
+                              <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">{{ post.title }}</p>
                               
                               <!-- Check if image exists -->
                               <img 
-                                v-if="data.files && data.files.length > 0" 
-                                :src="data.files[0].url" 
+                                v-if="post.files && post.files.length > 0" 
+                                :src="post.files[0].url" 
                                 class="d-block w-100" 
                                 alt="Image" 
                               />
                               <p v-else class="no-image">No image available.</p> <!-- Fallback for no image -->
                               
                               <!-- Check if html_content exists and is not empty -->
-                              <p v-if="data.html_content" style="font-size: 16px;font-weight: 400;color: #000000;padding-top: 20px;font-family: LatoG;" v-html="data.html_content"></p>
+                              <p v-if="post.html_content" style="font-size: 16px;font-weight: 400;color: #000000;padding-top: 20px;font-family: LatoG;" v-html="post.html_content"></p>
                               <p v-else class="no-content">No content available.</p> <!-- Fallback for no content -->
                             </div>
                           </template>

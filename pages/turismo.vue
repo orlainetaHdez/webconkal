@@ -12,7 +12,7 @@ const { data, error } = await useAsyncData(async () => {
       headers: {
       }
     })
-   const response2 = response.data.pages.data[0]
+   const response2 = response.data.pages.data
     
     console.log(response2)
     return response2
@@ -45,21 +45,21 @@ const { data, error } = await useAsyncData(async () => {
                            <p style="font-size: 16px;font-weight: 400;color: #000000;padding-top: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in consequat lectus, nec maximus orci. Aliquam malesuada sem tortor, ut eleifend quam malesuada eget. Proin mollis est a eros feugiat viverra. Donec laoreet varius tortor convallis bibendum. Mauris neque purus, lobortis id justo nec, sollicitudin luctus arcu. Sed gravida sit amet est maximus rhoncus. Pellentesque eget nunc in diam scelerisque elementum et et risus. Sed sed turpis sed nulla blandit feugiat. Cras aliquet tempor augue, eget mollis quam placerat quis. Vestibulum vehicula lorem purus, porttitor porttitor ex sollicitudin et. Duis bibendum arcu quis massa maximus, ac mattis risus laoreet. Aliquam ultricies ipsum massa, vitae sodales leo ultrices vel.<br><br>Integer ullamcorper ac mi in feugiat. Nulla nec lobortis magna, non volutpat urna. Mauris ac felis vulputate, dictum magna ut, viverra ex. Vivamus congue feugiat dolor sit amet venenatis. Mauris at congue neque. Aenean faucibus accumsan neque, in condimentum nulla. Nullam vel sem quis diam congue luctus a ut lacus. Donec id molestie nunc, ac vestibulum mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. <br><br>Duis vel hendrerit arcu. Nunc rutrum, lectus sit amet mattis luctus, odio nisl convallis odio, eu aliquet erat est ac sem. Donec fringilla enim a mauris euismod lobortis. Donec et sapien eu mi mollis fermentum sed non elit. Sed molestie quis lectus eget consequat. Sed nulla arcu, egestas ut felis quis, sollicitudin accumsan ex. Nulla eget semper tellus.</p>
                    
                       </template> -->
-                      <template>
+                      <template  v-for="(post,index) in data">
                             <div v-if="data && !error">
-                              <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">{{ data.title }}</p>
+                              <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">{{ post.title }}</p>
                               
                               <!-- Check if image exists -->
                               <img 
-                                v-if="data.files && data.files.length > 0" 
-                                :src="data.files[0].url" 
+                                v-if="post.files && post.files.length > 0" 
+                                :src="post.files[0].url" 
                                 class="d-block w-100" 
                                 alt="Image" 
                               />
                               <p v-else class="no-image">No image available.</p> <!-- Fallback for no image -->
                               
                               <!-- Check if html_content exists and is not empty -->
-                              <p v-if="data.html_content" style="font-size: 16px;font-weight: 400;color: #000000;padding-top: 20px;font-family: LatoG;" v-html="data.html_content"></p>
+                              <p v-if="post.html_content" style="font-size: 16px;font-weight: 400;color: #000000;padding-top: 20px;font-family: LatoG;" v-html="post.html_content"></p>
                               <p v-else class="no-content">No content available.</p> <!-- Fallback for no content -->
                             </div>
                           </template>
