@@ -17,7 +17,7 @@
 
 @font-face{
     font-family: "JostBold";
-    src: url("./fonts/Jost/static/Jost-Bold.ttf")format("truetype");
+    src: url("./fonts/Jost/static/Jost-Bold.ttf") format("truetype");
     /*src: url("./fonts/posterama/bf8e6666252f4d6e781c1afacd6fb995.eot?#iefix")format("embedded-opentype"),
         url("./fonts/posterama/bf8e6666252f4d6e781c1afacd6fb995.woff")format("woff"),
         url("./fonts/posterama/bf8e6666252f4d6e781c1afacd6fb995.woff2")format("woff2"),

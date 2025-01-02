@@ -226,7 +226,7 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
         <div id="contenidonumber" style="max-width:1004px;width:100%;min-height: 165px;padding: 36px;border-radius: 16px;background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65));margin-top: 10px;margin-bottom: 10px;">
             <p style=" font-size: 20px; font-weight: 700; text-align: center; color: #022452;font-family: JostBold; ">
                 NÚMEROS DE EMERGENCIA</p>
-            <div class="row" style="display: flex;justify-content:center;">
+            <div class="row" style="display: flex;justify-content:left;">
                 <div class="col-md-4" style="height: 40px;border-radius: 8px;display: flex;overflow: hidden;width: max-content;margin: 10px;padding: 0px;">
                     <div style="width: 54px;height: 40px;background-color: #CB2F80;display: flex;justify-content: center;align-items: center;">
                         <img src="assets/images/concal/emergencia/crisis_alert.png" style="width: 24px;">
