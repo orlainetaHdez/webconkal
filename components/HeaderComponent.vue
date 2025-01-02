@@ -100,18 +100,18 @@ function getCurrentDate() {
                                <div class="contenido">
                                  <div  style="display: flex;">
                                   <img src="assets/images/concal/PhoneCall.png" alt="Logo" width="16px;" height="16px;">
-                                   <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;margin-bottom: 0px !important;font-family: LatoG; ">999 912 4050</p>
+                                   <p style="font-size: 12px;color: #D9D9D9;padding-left: 5px;margin-bottom: 0px !important;font-family: LatoG; ">999 912 4050</p>
                                  </div>
                                  <div  style="display: flex;">
                                   <img src="assets/images/concal/MapPinLine.png" alt="Logo" width="16px;" height="16px;">
-                                   <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;margin-bottom: 0px !important;font-family: LatoG; ">22 s/n, Centro, 97000 Conkal, Yuc.</p>
+                                   <p style="font-size: 12px;color: #D9D9D9;padding-left: 5px;margin-bottom: 0px !important;font-family: LatoG; ">22 s/n, Centro, 97000 Conkal, Yuc.</p>
                                  </div>
                                </div>
                              </div>
                              <div class="col-4" style="display: flex;justify-content: center;align-items: center;border-left: solid;border-right: solid;">
                               <div class="contenido" style="display: flex;">
                               <img src="assets/images/concal/clock.png" alt="Logo" width="16px;" height="16px;">
-                               <p style="font-size: 12px;color: #D9D9D9;margin-bottom: 0px !important;padding-left: 12px;font-family: LatoG; ">Lun - Vie<br>9 AM - 5 PM</p>
+                               <p style="font-size: 12px;color: #D9D9D9;margin-bottom: 0px !important;padding-left: 5px;font-family: LatoG; ">Lun - Vie<br>9 AM - 5 PM</p>
                               </div>
                              </div>
                              <div class="col-4" style="display: flex;justify-content: center;align-items: center;">
@@ -119,7 +119,7 @@ function getCurrentDate() {
                               
                                 <img src="assets/images/concal/CloudSun.png" alt="Logo" width="16px;" height="16px;"> 
                                 <template>
-                                   <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;margin-bottom: 0px !important;font-family: LatoG; ">{{ currentDate }}</p>
+                                   <p style="font-size: 12px;color: #D9D9D9;padding-left: 2.5px;margin-bottom: 0px !important;font-family: LatoG; ">{{ currentDate }}</p>
                                 </template>
                               </div>
                              </div>

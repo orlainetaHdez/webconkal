@@ -12,20 +12,20 @@
                         <div style="padding-left: 14px;">
                             <div class="contenido" style="display: flex;">
                                 <img src="assets/images/concal/PhoneCall.png" alt="Logo" width="16px;" height="16px;">
-                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;font-family: LatoG; ">999 912 4050</p>
+                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 5px;font-family: LatoG; ">999 912 4050</p>
                             </div>
                         </div>
                         <div style="padding-left: 14px;">
                             <div class="contenido" style="display: flex;">
                                 <img src="assets/images/concal/clock.png" alt="Logo" width="16px;" height="16px;">
-                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;font-family: LatoG; ">Lun - Vie<br>9 AM - 5 PM
+                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 5px;font-family: LatoG; ">Lun - Vie<br>9 AM - 5 PM
                                 </p>
                             </div>
                         </div>
                         <div style="padding-left: 14px;">
                             <div class="contenido" style="display: flex;">
                                 <img src="assets/images/concal/MapPinLine.png" alt="Logo" width="16px;" height="16px;">
-                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 14px;font-family: LatoG; ">22 s/n, Centro,<br>.97000
+                                <p style="font-size: 12px;color: #D9D9D9;padding-left: 5px;font-family: LatoG; ">22 s/n, Centro,<br>.97000
                                     Conkal, Yuc.</p>
                             </div>
                         </div>
