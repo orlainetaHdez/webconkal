@@ -5,7 +5,7 @@ console.log("sdasdasd " + route.query.page_category_id)
 const { data, error } = await useAsyncData(async () => {
   try {
     // Realizando la solicitud GET con parámetros en la URL (query string)
-    const response = await $fetch('https://administrador.yucatanconkal.gob.mx/api/v1/portal/pagina/listar', {
+    const response = await $fetch('https://api.yucatanconkal.gob.mx/api/v1/portal/pagina/listar', {
       method: 'GET',
       params: {
         page_id :postId, // Agregar parámetros aquí en lugar de body
