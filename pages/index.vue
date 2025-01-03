@@ -153,7 +153,7 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
                                           <img :src="post.files[0].url" class="img-fluid w-100 rounded-top" alt="Image">
                                       </a>
                                   </div>
-                                  <div class="text-start"  style="height: 90px;border-radius: 0 0 10px 10px;background: #ffffff;position: relative;z-index: 10;">
+                                  <div class="text-start"  style="height: 120px;border-radius: 0 0 10px 10px;background: #ffffff;position: relative;z-index: 10;">
                                       <p class="titulo1   display-4  mb-4 " style="padding-top: 16px;font-weight:700;text-align: left;color: #065284;font-size:16px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px !important;">{{ post.title }}</p>
                                       <p class="   display-4  mb-4" style="padding-top: 5px;font-weight:400;text-align: left;color: #595959;font-size:10px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px !important;">{{ post.subtitle }}</p>
                                       <!-- <p style="line-height: 16.8px;font-weight: 300;text-align: left;font-size:14px !important;padding: 10px;color: #222222;padding-left: 10px;padding-right: 10px;font-family: LatoG;">Nuestra #alcaldesa Linda Pérez Quijano, mediante un homenaje arrancó de manera formal el inicio de las labores del Ayuntamiento de #Conkal para la administración...</p> -->

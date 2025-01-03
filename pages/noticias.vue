@@ -36,7 +36,7 @@
           <img src="assets/images/concal/union.png" class="img-fluid w-100 rounded-top" alt="Image" style="max-width: 736px !important;position: absolute;right: -77px;opacity: 60%;    bottom: -150px;z-index: 1;">
             <div class="container" style="max-width: 1220px;z-index: 2;position: relative;" >
                 <div class="row">
-                    <div class=" col-lg-9" style="padding-bottom: 10px;text-align: left;">
+                    <div class=" col-lg-9" style="padding-bottom: 32px;text-align: left;">
                            <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;margin-bottom: 0px;">Noticias</p>
                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                                 <div class="carousel-indicators">
@@ -119,7 +119,7 @@
                                                           <img :src="post.files[0].url" class="img-fluid w-100 rounded-top" alt="Image">
                                                      
                                                   </div>
-                                                  <div class="text-start"  style="    height: 90px;border-radius: 0 0 10px 10px;background: #ffffff;position: relative;z-index: 10;">
+                                                  <div class="text-start"  style="    height: 120px;border-radius: 0 0 10px 10px;background: #ffffff;position: relative;z-index: 10;">
                                                       <p class="titulo1   display-4  mb-4 " style="padding-top: 16px;font-weight:700;text-align: left;color: #065284;font-size:16px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px !important;">{{ post.title }}</p>
                                                       <p class="   display-4  mb-4" style="padding-top: 5px;font-weight:400;text-align: left;color: #595959;font-size:10px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px !important;">{{ post.subtitle }}</p>
                                                       <!-- <p style="line-height: 16.8px;font-weight: 300;text-align: left;font-size:14px !important;padding: 10px;color: #222222;padding-left: 10px;padding-right: 10px;">Nuestra #alcaldesa Linda Pérez Quijano, mediante un homenaje arrancó de manera formal el inicio de las labores del Ayuntamiento de #Conkal para la administración...</p> -->
