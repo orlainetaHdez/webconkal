@@ -29,9 +29,7 @@ export default defineNuxtConfig({
       });
     }
   },
-  modules: [
-    'nuxt-keen-slider'
-  ],
+  modules: ['nuxt-keen-slider', 'nuxt-swiper'],
   app: {
  head: {
       htmlAttrs: {

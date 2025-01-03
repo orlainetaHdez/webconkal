@@ -134,7 +134,7 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
                     </div>
                     <div class="col-lg-3" style="--bs-gutter-x: 5px;">           
                          <Tramites></Tramites>
-                         <img src="assets/images/concal/Frame 26.png" style="padding-top: 10px;width: 100%;">
+                         <TheBanners/>
                     </div>
               </div>
               <p class="titulo1 display-4  mb-4 text-uppercase" style="font-weight:700;text-align: left;color:#CB2F80 ;font-size:20px;margin-bottom: 10px !important;padding-top: 20px;">Sala de prensa</p>
