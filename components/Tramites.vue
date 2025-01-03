@@ -58,12 +58,12 @@
                                     </div></a>
                                   </div>
                                   <div class="col-4 serviciosMunicipales" style="display: flex;justify-content: center;align-items: center;">
-                                    <a href="tramites"><div class="servicios" style="cursor: pointer;width: 88px; height: 88px; border-radius: 12px;background-color: #065284;display: flex;justify-content: center;align-items: center;">
+                                    <a href="boletines"><div class="servicios" style="cursor: pointer;width: 88px; height: 88px; border-radius: 12px;background-color: #065284;display: flex;justify-content: center;align-items: center;">
                                       <div  class="contIcon">
                                         <svg class="icono" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"  style="width:36px;height:36px;">
                                         <path d="M30 10.5H15V13.5H30V31.5H6V13.5H9V19.5H12V7.5H21V1.5H9V10.5H6C4.35 10.5 3 11.85 3 13.5V31.5C3 33.15 4.35 34.5 6 34.5H30C31.65 34.5 33 33.15 33 31.5V13.5C33 11.85 31.65 10.5 30 10.5Z" fill="white"/>
                                         </svg>
-                                        <p style="color: white;font-size: 12px;margin-bottom: 0px;margin-top: 2px;">QUEJAS</p>
+                                        <p style="color: white;font-size: 12px;margin-bottom: 0px;margin-top: 2px;">BOLETINES</p>
                                       </div>
                                     </div></a>
                                   </div>
