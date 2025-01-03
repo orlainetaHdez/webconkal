@@ -165,7 +165,7 @@ const { data:convocatoria, error:errorconv } = await useAsyncData(async () => {
             </div>
       </div>
       <img src="assets/images/concal/Plecamaya 1.png" class="img-fluid w-100 rounded-top" alt="Image" style="width:100%;z-index: 2;height: 34px;position: relative;">
-      <div class="container-fluid py-5" style="min-height:442px;display: flex;justify-content: center;align-items: center;background: linear-gradient(rgba(6, 82, 132, 0.7), rgba(6, 82, 132, 0.7)), url(images/fondohistorias.png); position: relative; z-index: 2; background-size: cover; background-repeat: no-repeat; background-position: center; background-color: #065284;">
+      <div class="container-fluid py-5" style="/*min-height:442px;*/display: flex;justify-content: center;align-items: center;background: linear-gradient(rgba(6, 82, 132, 0.7), rgba(6, 82, 132, 0.7)), url(images/fondohistorias.png); position: relative; z-index: 2; background-size: cover; background-repeat: no-repeat; background-position: center; background-color: #065284;">
         <!-- <img src="assets/images/concal/fondohistorias.png"> -->
         <div class="container" style="max-width: 1119px;">
             <div class="text-center">
