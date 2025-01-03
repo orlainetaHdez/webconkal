@@ -49,9 +49,9 @@ const { data, error } = await useAsyncData(async () => {
                            <div style="width: 100%;">
                              <p style="font-size: 12px;font-weight: 400;color: #595959;padding: 10px;background-color: #D9D9D9;font-family: LatoG;">{{ data.subtitle }}</p>
                            </div>
-                          <template>
+                          <!--template-->
                             <div :key="data.html_content" v-html="data.html_content" style="font-size: 16px;font-weight: 400;color: #000000;padding-top: 10px;font-family: LatoG;"></div>
-                          </template>
+                          <!--/template-->
                          </div>
                         
                            <!-- <div class="row" >
