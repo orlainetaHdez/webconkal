@@ -81,14 +81,14 @@ const submitForm = async () => {
                     <div class=" col-lg-9" style="padding-bottom: 30px;text-align: left;padding-right: 30px !important;">
                            <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">Reporte</p>
                            <!-- <form action="/enviar-reporte" method="POST" @submit.prevent="submitForm"> -->
-                          <template>
+                          <!--template-->
                             <form @submit.prevent="submitForm">
                            <div  class="row">
                              <div  class="col-12" style="margin-top:20px;">
                                <label for="frutas" style="width:100%;">Tipo:</label>
                                <select v-model="form.report_type_id" id="report_type_id" name="frutas" style="width:100%;height:40px;border:1px solid #D9D9D9;border-radius:10px;padding-left: 15px;margin-top: 5px;">
-                                <template v-for="(post,index) in reportes">
-                                  <option :value="post.id" >{{ post.name }}</option>
+                                <template v-for="(post3,index) in reportes">
+                                  <option :value="post3.id" >{{ post3.name }}</option>
                                 </template>         
                                </select>
                              </div>
@@ -122,7 +122,7 @@ const submitForm = async () => {
                               <p class="titlecolumns" style="font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 0px; padding-left: 10px;">ENVIAR REPORTE</p>
                             </button>
                           </form>
-                        </template>
+                        <!--/template-->
                            <!-- <div class="contTitles2"  style="background-color: #CB2F80;height:40px;width:290px;display:flex;justify-content: center;align-items: center;border-radius:8px;margin-top:30px;">
                              <svg class="iconsvg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                              <path d="M3.51 6.03L11.02 9.25L3.5 8.25L3.51 6.03ZM11.01 14.75L3.5 17.97V15.75L11.01 14.75ZM1.51 3L1.5 10L16.5 12L1.5 14L1.51 21L22.5 12L1.51 3Z" fill="white"/>
