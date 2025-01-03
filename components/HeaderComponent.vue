@@ -118,9 +118,9 @@ function getCurrentDate() {
                               <div class="contenido"  style="display: flex;">
                               
                                 <img src="assets/images/concal/CloudSun.png" alt="Logo" width="16px;" height="16px;"> 
-                                <template>
+                              
                                    <p style="font-size: 12px;color: #D9D9D9;padding-left: 2.5px;margin-bottom: 0px !important;font-family: LatoG; ">{{ currentDate }}</p>
-                                </template>
+                               
                               </div>
                              </div>
                           </div>
