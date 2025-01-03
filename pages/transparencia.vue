@@ -1,4 +1,22 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { data, error } = await useAsyncData(async () => {
+  try {
+    // Realizando la solicitud GET con parámetros en la URL (query string)
+    const response = await $fetch('https://api.yucatanconkal.gob.mx/api/v1/portal/transparencia/listar', {
+      method: 'GET',
+    })
+   const response2 = response.data.transparency_categories.data
+    
+    console.log(response2)
+    return response2
+  } catch (err) {
+    // Manejo de errores
+    console.error('Error en el envío del reporte:', err)
+    throw new Error('Hubo un error al enviar el reporte.')
+  }
+})
+
+</script>
 
 <template>
   <div>
@@ -14,195 +32,27 @@
                 <div class="row">
                     <div class="col-lg-3" style="padding-right: 0px !important;padding-left: 0px !important;" >
                       <div class="accordion accordion-flush" id="accordionFlushExample">
-                                  <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">
+
+                        <template v-for="(post,index) in data">
+                            <div v-if="data && !error">
+                              
+                              <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">
                                     <h2 class="accordion-header" id="flush-headingOne">
-                                      <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="font-size: 14px;font-weight: 600;color:#065284; background-color: #D9D9D9;">
-                                        Ley de Ingresos
+                                      <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" :data-bs-target="'#flush-collapse'+post.name" aria-expanded="false" :aria-controls="'flush-collapse'+post.name" style="font-size: 14px;font-weight: 600;color:#065284; background-color: #D9D9D9;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;">
+                                        {{ post.name }}
                                       </button>
                                     </h2>
-                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div v-for="(post2,index) in data.files" :id="'flush-collapse'+post.name" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                       <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
                                        <p style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2021</p>
                                       </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2022</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2023</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2024</p>
-                                      </div>
+                                     
                                     </div>
                                   </div>
-                                  <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">
-                                    <h2 class="accordion-header" id="flush-headingTwo">
-                                      <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"  style="font-size: 14px;font-weight: 600;color:#065284; background-color: #D9D9D9;">
-                                        Ley de Hacienda
-                                      </button>
-                                    </h2>
-                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2021</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2022</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2023</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2024</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">
-                                    <h2 class="accordion-header" id="flush-headingThree">
-                                      <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"  style="font-size: 14px;font-weight: 600;color:#065284; background-color: #D9D9D9;">
-                                        Convenios
-                                      </button>
-                                    </h2>
-                                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2021</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2022</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2023</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2024</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">
-                                    <h2 class="accordion-header" id="flush-headingThree">
-                                      <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree2" aria-expanded="false" aria-controls="flush-collapseThree2"  style="font-size: 14px;font-weight: 600;color:#065284; background-color: #D9D9D9;">
-                                        Gacetas
-                                      </button>
-                                    </h2>
-                                    <div id="flush-collapseThree2" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2021</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2022</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2023</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2024</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">
-                                    <h2 class="accordion-header" id="flush-headingThree">
-                                      <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree3" aria-expanded="false" aria-controls="flush-collapseThree3"  style="font-size: 14px;font-weight: 600;color:#065284; background-color: #D9D9D9;">
-                                        Armonización Contable
-                                      </button>
-                                    </h2>
-                                    <div id="flush-collapseThree3" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2021</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2022</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2023</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2024</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">
-                                    <h2 class="accordion-header" id="flush-headingThree">
-                                      <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree4" aria-expanded="false" aria-controls="flush-collapseThree4"  style="font-size: 14px;font-weight: 600;color:#065284; background-color: #D9D9D9;">
-                                        Anexos
-                                      </button>
-                                    </h2>
-                                    <div id="flush-collapseThree4" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2021</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2022</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2023</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2024</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">
-                                    <h2 class="accordion-header" id="flush-headingThree">
-                                      <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree5" aria-expanded="false" aria-controls="flush-collapseThree5"  style="font-size: 14px;font-weight: 600;color:#065284; background-color: #D9D9D9;">
-                                        Declaraciones<br>patrimoniales
-                                      </button>
-                                    </h2>
-                                    <div id="flush-collapseThree5" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2021</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2022</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2023</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2024</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">
-                                    <h2 class="accordion-header" id="flush-headingThree">
-                                      <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree6" aria-expanded="false" aria-controls="flush-collapseThree6"  style="font-size: 14px;font-weight: 600;color:#065284; background-color: #D9D9D9;">
-                                        Marcos Normativos
-                                      </button>
-                                    </h2>
-                                    <div id="flush-collapseThree6" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2021</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2022</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2023</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2024</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">
-                                    <h2 class="accordion-header" id="flush-headingThree">
-                                      <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree7" aria-expanded="false" aria-controls="flush-collapseThree7"  style="font-size: 14px;font-weight: 600;color:#065284; background-color: #D9D9D9;">
-                                        Enlaces
-                                      </button>
-                                    </h2>
-                                    <div id="flush-collapseThree7" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2021</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2022</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2023</p>
-                                      </div>
-                                      <div class="accordion-body" style="background:#FFF !important;border-bottom:1px solid #AFAFAF;">
-                                       <p  style="text-align: left;font-size:14px !important;color:#595959;margin-bottom:0px;font-weight:600;">2024</p>
-                                      </div>
-                                    </div>
-                                  </div>
+                             </div>
+                        </template>
+
+                                  
                                 </div>
                     </div>
                     <div class=" col-lg-9" style="padding-left: 20px;padding-right: 20px;text-align: left;">
@@ -229,7 +79,7 @@
                              </div>
                            </div>
                            <div>
-                             <div class="accordion accordion-flush" id="accordionFlushExample2" style="padding-top: 10px;">
+                             <!--div class="accordion accordion-flush" id="accordionFlushExample2" style="padding-top: 10px;">
                                          <div class="accordion-item" style="border-bottom:1px solid #AFAFAF;">
                                            <h2 class="accordion-header" id="flush-headingOne">
                                              <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2" style="font-size: 14px;font-weight: 600;color:#065284; background-color: #D9D9D9;">
@@ -284,7 +134,7 @@
                                              </div>
                                            </div>
                                          </div>
-                                         </div>
+                                         </div-->
                                        </div>
                            </div>
                     </div>

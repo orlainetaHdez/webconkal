@@ -1,12 +1,17 @@
 <script setup lang="ts">
 
+const route = useRoute()
+const postId = route.query.id
+
+const categoria = route.query.categoria
+ console.log(categoria)
 const { data : directorio, error } = await useAsyncData(async () => {
   try {
     // Realizando la solicitud GET con parámetros en la URL (query string)
     const response2 = await $fetch('https://api.yucatanconkal.gob.mx/api/v1/portal/directory/hierarchies', {
       method: 'GET',
       params: {
-        municipal_department_id: 1, // Agregar parámetros aquí en lugar de body
+        municipal_department_id: postId, // Agregar parámetros aquí en lugar de body
       },
       headers: {
       }
@@ -65,7 +70,7 @@ const response2 = directorioP.value.data.municipalDepartments*/
     <MenuGeneral></MenuGeneral>
     <div style="min-height: 40px;background-color: #D9D9D9;display: flex;justify-content: center;">
             <div style="width: 100%;min-height: 40px;max-width: 1182px;align-content: center;">
-            <p style="font-weight: 600;font-size: 14px;color: #022452;margin-bottom: 0px;padding-left: 16px;">INICIO <i class="fas fa-chevron-right" style="padding-left: 8px;padding-right: 8px;"></i> DIRECTORIO</p>
+            <p style="font-weight: 600;font-size: 14px;color: #022452;margin-bottom: 0px;padding-left: 16px;">INICIO <i class="fas fa-chevron-right" style="padding-left: 8px;padding-right: 8px;"></i> Directorio</p>
             </div>
     </div>
     <div class="container-fluid blog pb-5 fadeInUp" style="text-align: -webkit-center;z-index: 1;position: relative;padding-top: 20px !important;padding-bottom: 150px !important;background-color: #f6f6f6;">
@@ -73,7 +78,7 @@ const response2 = directorioP.value.data.municipalDepartments*/
             <div class="container" style="max-width: 1119px;z-index:2;position:relative;--bs-gutter-x: 5px;" >
                 <div class="row">
                     <div class=" col-lg-9" style="padding-bottom: 10px;text-align: left;">
-                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;">Presidencia Municipal</p>
+                           <p style="font-size: 48px;font-weight: 700;color:#022452;text-align: left;width: 90%;font-family: JostBold;"> {{ categoria }}</p>
                            <div class="row">
                             <template v-for="(post,index) in directorio">
                               <div v-if="index ===0"  class="col-12" > 
@@ -107,7 +112,7 @@ const response2 = directorioP.value.data.municipalDepartments*/
                               <p style="font-size: 20px;color: white;font-weight: 600;margin-bottom: 0px;">DIRECTORIO</p>
                             </div>
                             <template v-for="(post2,index) in directorioP">
-                              <a :href="'listado?id='+post2.id+'&categoria='+post2.name"><div class="contTitles" style="width: 100%;background-color: #D9D9D9;display: flex;justify-content: left;align-items: center;border-bottom:1px solid #AFAFAF;cursor: pointer;">
+                                <a :href="'listado?id='+post2.id+'&categoria='+post2.name"><div class="contTitles" style="width: 100%;background-color: #D9D9D9;display: flex;justify-content: left;align-items: center;border-bottom:1px solid #AFAFAF;cursor: pointer;">
                                 <i class="iconsvg fas fa-chevron-right" style="padding-left: 18px;padding-right: 10px;color:#065284;"></i>
                                   <p class="titlecolumns text-uppercase" style="font-size: 14px;color: #065284;font-weight: 600;margin-bottom: 0px;text-align: left;padding: 6px;">{{ post2.name }}</p>
                                 </div></a>
