@@ -29,7 +29,7 @@ const { data: getData, error: getError, status: getStatus, refresh: getRefresh }
           :key="banner.id"
           class="container"
         >
-          <img :src="banner.files[0].url" class="img-fluid img">
+        <a :href="'detalle_boletines?id='+banner.id"><img :src="banner.files[0].url" class="img-fluid img"></a>
         </swiper-slide>
       </swiper-container>
     </ClientOnly>
