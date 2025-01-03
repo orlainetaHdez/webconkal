@@ -10,7 +10,7 @@
                     <a href="index" class="navbar-brand p-0">
     
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" style="margin-bottom: 10px; margin-top: 10px;">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" style="margin-bottom: 10px; margin-top: 10px;width: 100%;">
                         <span class="fa fa-bars"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse" style="min-height: 44px;">
